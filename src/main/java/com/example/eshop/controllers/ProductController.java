@@ -1,8 +1,7 @@
-package com.example.eshop3.controllers;
+package com.example.eshop.controllers;
 
-import com.example.eshop3.requests.CreateProductRequest;
-import com.example.eshop3.services.Product;
-import com.example.eshop3.services.ProductService;
+import com.example.eshop.requests.CreateProductRequest;
+import com.example.eshop.services.Product;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

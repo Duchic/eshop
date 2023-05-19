@@ -1,6 +1,6 @@
-package com.example.eshop3.repositories;
+package com.example.eshop.repositories;
 
-import com.example.eshop3.entities.ProductEntity;
+import com.example.eshop.entities.ProductEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

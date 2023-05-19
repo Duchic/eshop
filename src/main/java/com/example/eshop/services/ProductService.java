@@ -1,8 +1,8 @@
-package com.example.eshop3.services;
+package com.example.eshop.services;
 
-import com.example.eshop3.entities.ProductEntity;
-import com.example.eshop3.repositories.ProductRepository;
-import com.example.eshop3.requests.CreateProductRequest;
+import com.example.eshop.entities.ProductEntity;
+import com.example.eshop.repositories.ProductRepository;
+import com.example.eshop.requests.CreateProductRequest;
 import org.springframework.stereotype.Service;
 
 @Service

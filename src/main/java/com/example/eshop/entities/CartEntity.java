@@ -1,16 +1,19 @@
-package com.example.eshop3.entities;
+package com.example.eshop.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Set;
 
-@Entity(name="carts")
+@Entity(name="carts") // Oznaceni tridy ze reprezentuje tabulku a name = nazev tabulky v databazi
+@Setter
+@Getter
 //@JsonIgnoreProperties("products")
 public class CartEntity {
-    @Id()
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="cart_id")
+    @Id() // Oznaceni primarniho klice
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Autoincrement
+    @Column(name="cart_id") // dodatecne contrainty nebo informace ke sloupecku
     private int id;
 
     @Column(name="name", nullable = false)
@@ -18,5 +21,11 @@ public class CartEntity {
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(joinColumns = @JoinColumn(name = "product_id"), inverseJoinColumns = @JoinColumn(name="cart_id"))
-    private Set<ProductEntity> products;
+    private Set<ProductEntity> products; // m:n -> vytvori to vazebni tabulku
+
+    public CartEntity() {}
+
+    public CartEntity(String name) {
+        this. name = name;
+    }
 }

@@ -24,4 +24,5 @@ public class ProductEntity {
         this.id = id;
         this.name = name;
     }
+
 }

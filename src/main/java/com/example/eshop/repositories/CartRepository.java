@@ -4,6 +4,8 @@ import com.example.eshop.entities.CartEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.time.ZonedDateTime;
+
 // JpaRepository - vice interface dohromady - strankovani, crud, pagination
 
 @Repository
